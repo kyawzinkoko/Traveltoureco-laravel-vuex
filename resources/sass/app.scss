@@ -1,0 +1,72 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+// @import '~bootstrap/scss/bootstrap';
+
+@import '../../node_modules/semantic-ui-css/semantic.min.css';
+
+@mixin inputFocus {
+    background-color: rgba(0,0,0, 0.5);
+    color: $white;
+}
+.banner-auth {
+    background: url('/images/banner/banner.jpg') no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+
+    .overlay {
+        background-color: rgba(0,0,0, 0.5);
+        height: 100vh;
+        padding-top: 13rem;
+        .card {
+            width: 35rem;
+            background: #00000085;
+            box-shadow: none;
+        }
+        .form {
+            padding: 3rem;
+
+            label, .icon {
+                color: $mainColor !important;
+            }
+            input {
+                border: 0;
+                padding: 1.2rem;
+                position: relative;
+                @include inputFocus();  
+                &:focus {
+                    @include inputFocus();  
+                }
+            }
+            .pointing {
+                position: absolute;
+                right: 0;
+                bottom: 30px;
+            }
+            .error {
+                .list {
+                    li {
+                        color: $red;
+                    }
+                }
+            }
+        }
+        .message {
+            margin-top: 20px;
+            color: $white;
+            
+            .column {
+                text-align: center !important;
+            }
+            a {
+                color: $mainColor;
+                margin-left: 10px;
+            }
+        }
+    }
+}
