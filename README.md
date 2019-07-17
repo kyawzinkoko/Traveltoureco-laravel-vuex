@@ -1,1 +1,3 @@
-<button type="button" class="btn btn-primary btn-sm">Small button</button>
+<h1>Laravel</h1>
+<h2>Vuex</h2>
+<h3>Scss</h3>
